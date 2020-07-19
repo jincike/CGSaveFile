@@ -189,7 +189,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		}
 	}
 	
-
+	return 0;
 Error:
 	CloseInput();
 	CloseOutput();
@@ -197,6 +197,7 @@ Error:
 	{
 		this_thread::sleep_for(chrono::seconds(100));
 	}
+	av_log(NULL,AV_LOG_ERROR,"Error");
 	return 0;
 }
 
